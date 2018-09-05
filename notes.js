@@ -1,5 +1,3 @@
-console.log('Starting notes.js');
-
 const fs = require('fs');
 
 //Fetches notes from json an converts to object if the file exists, else returns an empty array
@@ -35,7 +33,7 @@ var addNote = (title, body) => {
 };
 
 var getAll = () => {
-	console.log('Getting all notes...');
+	return fetchNotes();
 };
 
 var getNote = (title) => {
@@ -45,6 +43,7 @@ var getNote = (title) => {
 };
 
 var logNote = (note) => {
+	debugger;
 	console.log('---');
 	console.log('Title:', note.title);
 	console.log('Body:', note.body);
